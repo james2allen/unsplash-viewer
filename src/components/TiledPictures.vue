@@ -12,22 +12,15 @@
     mounted () {
       this.$store.dispatch('LOAD_PHOTOS')
       window.addEventListener('scroll', () => {
-        this.bottom = this.atBottom()
+        this.atBottom()
       })
-    },
-    data () {
-      return {
-        bottom: false
-      }
     },
     methods: {
       atBottom () {
         const visible = document.documentElement.clientHeight
         const pageHeight = document.documentElement.scrollHeight
         const bottomOfPage = visible + window.scrollY >= pageHeight
-        if (bottomOfPage || pageHeight < visible) {
-          this.$store.dispatch('LOAD_PHOTOS')
-        }
+        return bottomOfPage || pageHeight < visible ? this.$store.dispatch('LOAD_PHOTOS') : undefined
       }
     }
   }
