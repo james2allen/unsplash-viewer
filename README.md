@@ -1,4 +1,4 @@
-# unsplash-viewer
+# Vue Unsplash Viewer
 
 > A vue-based viewer for unsplash photos
 
@@ -18,5 +18,4 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-# unsplash-viewer
+# rename example.env to .env and replace values with your own unsplash information
