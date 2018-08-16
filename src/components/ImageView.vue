@@ -20,12 +20,6 @@
                 dd {{photo.views}}
                 dt Likes:
                 dd {{photo.likes}}
-        div.container(v-if='display')
-            div.left-arrow.arrow(@click='prevImage')
-                p <
-            div.right-arrow.arrow(@click='nextImage')
-                P >
-            img(fluid, :src='photo.urls.regular')
 
 </template>
 
@@ -70,12 +64,6 @@
             this.photo = json
             this.display = true
           })
-      },
-      nextImage () {
-        this.$router.push({name: 'ImageView', params: {image_id: this.photo.id, index: this.index}})
-      },
-      prevImage () {
-        console.log('fsdfsdf')
       }
     }
   }
