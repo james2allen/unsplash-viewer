@@ -18,4 +18,4 @@ npm run build
 npm run build --report
 ```
 
-# rename example.env to .env and replace values with your own unsplash information
+rename example.env to .env and replace values with your own unsplash information
